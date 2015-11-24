@@ -5,13 +5,16 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <source src="http://code.jquery.com/jquery-2.1.4.js" type="jqeury">
-
-  </script>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
-
-<%= yield %>
-
+  <nav class="navbar">
+    <h3>Nav bar!</h3>
+    <%= link_to "Inventory", items_path %>
+  </nav>
+  <div class="page_content">
+    <%= yield %>
+  </div>
 </body>
 </html>

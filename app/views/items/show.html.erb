@@ -1,6 +1,76 @@
-<h2>Individual Item Page</h2>
+<div class="container item_header">
+  <div class="col-md-10">
+    <h2><%= @item.name %></h2>
+    <p><%= @item.description %> description text here</p>
+  </div>
+  <div class="col-md-2 item_icon">
+    <p> image icon </p>
+  </div>
+</div>
 
-<ul>
-  <li><%= @item.name %><li>
-  <li><%= @item.description %></li>
-</ul>
+<div class="container">
+  <div class="col-md-4 item_details stats_detail">
+    <h4>Attribute Bonuses</h4>
+    <% if @item.stat1 === nil && @item.stat2 === nil && @item.stat3 === nil %>
+      <p>This item has no attribute modifiers.</p>
+    <% else %>
+      <% if @item.stat1 ===! nil %>
+      <p>Stat Bonus: <%= @item %></p>
+      <% end %>
+      <% if @item.stat2 ===! nil %>
+      <p>Stat Bonus: <%= @item %></p>
+      <% end %>
+      <% if @item.stat3 ===! nil %>
+      <p>Stat Bonus: <%= @item %></p>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="col-md-4 item_details skills_detail">
+    <h4>Skill Bonuses</h4>
+    <% if @item.skill1 === nil && @item.skill2 === nil && @item.skill3 === nil %>
+      <p>This item has no skill modifiers.</p>
+    <% else %>
+      <% if @item.skill1 ===! nil %>
+      <p>Stat Bonus: <%= @item %></p>
+      <% end %>
+      <% if @item.skill2 ===! nil %>
+      <p>Stat Bonus: <%= @item %></p>
+      <% end %>
+      <% if @item.skill3 ===! nil %>
+      <p>Stat Bonus: <%= @item %></p>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="col-md-4 item_details owner_detail">
+    <h4>Owner Information</h4>
+    
+  </div>
+</div>
+
+<div class="container item_detail_dropdowns">
+  <div class="col-md-10 edit_description">
+    <p>Edit Description/Lore</p>
+  </div>
+  <div class="col-md-2 description_expand">
+    <p>+</p>
+  </div>
+</div>
+
+<div class="container item_detail_dropdowns">
+  <div class="col-md-10 edit_stats">
+    <p>Edit Stats/Owner</p>
+  </div>
+  <div class="col-md-2 stats_expand">
+    <p>+</p>
+  </div>
+</div>
+
+<div class="container item_detail_dropdowns">
+  <div class="col-md-10 sell_item">
+    <p>Sell Item/Delete</p>
+  </div>
+  <div class="col-md-2 sell_expand">
+    <p>+</p>
+  </div>
+
+</div>

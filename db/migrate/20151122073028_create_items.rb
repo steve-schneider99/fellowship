@@ -15,6 +15,7 @@ class CreateItems < ActiveRecord::Migration
       t.column :skill3, :string
       t.column :damage, :string
       t.column :owner, :integer
+      t.column :equipped?, :boolean, default: false
       t.timestamps
     end
   end

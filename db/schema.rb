@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20151122073028) do
     t.string   "skill3"
     t.string   "damage"
     t.integer  "owner"
+    t.boolean  "equipped?",   default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
