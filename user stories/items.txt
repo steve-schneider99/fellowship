@@ -1,0 +1,16 @@
+Items attributes:
+  Name - string - Item's name
+  Description - string - description/lore of the item
+  Note - string - player-added notes
+  Quantity - fixnum - how many of the item in inventory(typically consumables)
+  Type - string - general category of item - weapon/armor/consumable/quest item/misc
+  Owner - string - whose inventory item is currently in, default is party
+  Value - fixnum - sell value of item
+  Stat1 - stringFixnum(i.e. 'str4' = +4 strength) - item's primary attribute modifier
+  Stat2 - stringFixnum - item's primary attribute modifier
+  Stat3
+  Skill1 - same as stat1
+  Skill2 - same as stat2
+  Skill3
+  Damage - string('1d10+7') - weapon's damage. will need to extrapolate numbers for fixnum later
+  

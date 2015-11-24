@@ -18,6 +18,18 @@ ActiveRecord::Schema.define(version: 20151122073028) do
 
   create_table "items", force: :cascade do |t|
     t.string   "name"
+    t.string   "description"
+    t.string   "note"
+    t.integer  "quantity"
+    t.string   "type"
+    t.integer  "value"
+    t.string   "stat1"
+    t.string   "stat2"
+    t.string   "stat3"
+    t.string   "skill1"
+    t.string   "skill2"
+    t.string   "skill3"
+    t.string   "damage"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
