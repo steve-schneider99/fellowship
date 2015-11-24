@@ -4,5 +4,23 @@
   <%= f.label :name %>
   <%= f.text_field :name %>
   <br />
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+  <br />
+  <%= f.label :type %>
+  <%= f.text_field :type %>
+  <br />
+  <%= f.label :owner %>
+  <%= f.text_field :owner, placeholder: "make drop down list of character names with plaer names i.e. Jaffrin/Chet  " %>
+  <br />
+  <%= f.label "Attribute Bonus" %>
+  <%= f.text_field :stat1, placeholder: "drop down list of attributes str/dex/int/etc." %>
+  <%= f.text_field :stat1, placeholder: "number entry for modifier total" %>
+  <br />
+  <% if @item.type === nil %>
+   <%= f.label :damage %>
+   <%= f.text_field :damage %>
+  <% end %>
+  <br />
   <%= f.submit %>
 <% end %>
