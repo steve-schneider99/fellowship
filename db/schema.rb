@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20151122073028) do
     t.string   "description"
     t.string   "note"
     t.integer  "quantity"
-    t.string   "type"
+    t.string   "item_type"
     t.integer  "value"
     t.string   "stat1"
     t.string   "stat2"

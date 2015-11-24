@@ -2,19 +2,55 @@
 <html>
 <head>
   <title>Fellowship</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application',  media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <source src="http://code.jquery.com/jquery-2.1.4.js" type="jqeury">
   <%= csrf_meta_tags %>
 
 </head>
 <body>
-  <nav class="navbar">
-    <h3>Nav bar!</h3>
-    <%= link_to "Inventory", items_path %>
-  </nav>
-  <div class="page_content">
+  <nav id="colorNav">
+	<ul>
+		<li class="green">
+      <%= image_tag "navbar/nav_items.png", size: "40x40" %>
+			<ul>
+				<li><a href="#">My Inventory</a></li>
+				<li><a href="/items">Party Inventory</a></li>
+			</ul>
+		</li>
+    <li class="blue">
+      <%= image_tag "navbar/nav_party.png", size: "40x40" %>
+      <ul>
+        <li><a href="#">My Character Info</a></li>
+        <li><a href="#">My Party Members</a></li>
+      </ul>
+    </li>
+    <li class="purple">
+      <a href="#"></a>
+      <ul>
+        <li><a href="#">Dropdown item 1</a></li>
+        <li><a href="#">Dropdown item 2</a></li>
+      </ul>
+    </li>
+    <li class="yellow">
+      <%= image_tag "navbar/nav_dragon.png", size: "40x40" %>
+      <ul>
+        <li><a href="#">Beastiary</a></li>
+        <li><a href="#">Quests</a></li>
+      </ul>
+    </li>
+    <li class="red">
+      <%= image_tag "navbar/nav_add.png", size: "40x40" %>
+      <ul>
+        <li><a href="items/new">New Item</a></li>
+        <li><a href="#">New Character</a></li>
+        <li><a href="#">New Note</a></li>
+      </ul>
+    </li>
+	</ul>
+</nav>
+
     <%= yield %>
-  </div>
+
 </body>
 </html>

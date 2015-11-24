@@ -8,7 +8,7 @@
   <%= f.text_area :description %>
   <br />
   <%= f.label :type %>
-  <%= f.text_field :type %>
+  <%= f.text_field :item_type %>
   <br />
   <%= f.label :owner %>
   <%= f.text_field :owner, placeholder: "make drop down list of character names with plaer names i.e. Jaffrin/Chet  " %>
@@ -17,7 +17,7 @@
   <%= f.text_field :stat1, placeholder: "drop down list of attributes str/dex/int/etc." %>
   <%= f.text_field :stat1, placeholder: "number entry for modifier total" %>
   <br />
-  <% if @item.type === nil %>
+  <% if @item.item_type === nil %>
    <%= f.label :damage %>
    <%= f.text_field :damage %>
   <% end %>

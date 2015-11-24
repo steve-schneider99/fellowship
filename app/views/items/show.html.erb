@@ -4,7 +4,7 @@
     <p><%= @item.description %> description text here</p>
   </div>
   <div class="col-md-2 item_icon">
-    <p> image icon </p>
+    <%= image_tag "icons/icon_" + @item.item_type + ".png", size: "60x60" %>
   </div>
 </div>
 
@@ -43,7 +43,12 @@
   </div>
   <div class="col-md-4 item_details owner_detail">
     <h4>Owner Information</h4>
-    
+    <p>Currently owned by: <%= @item.owner %></p>
+    <% if @item.equipped? === true %>
+      <p>Item is currently equipped.</p>
+    <% else %>
+      <p>Item is currently not equipped.</p>
+    <% end %>
   </div>
 </div>
 

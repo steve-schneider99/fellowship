@@ -5,7 +5,7 @@ class CreateItems < ActiveRecord::Migration
       t.column :description, :string
       t.column :note, :string
       t.column :quantity, :integer
-      t.column :type, :string
+      t.column :item_type, :string
       t.column :value, :integer
       t.column :stat1, :string
       t.column :stat2, :string
