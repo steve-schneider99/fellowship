@@ -3,4 +3,14 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+
+def get_user_names
+  name_list = []
+  User.all.each do |user|
+    name_list.push(user.name)
+  end
+  return name_list
+end
+
 end

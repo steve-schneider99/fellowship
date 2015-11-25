@@ -5,6 +5,8 @@ class ItemsController < ApplicationController
   end
 
   def new
+    # add in later once I flesh out users
+    # @user_names = User.get_user_names
     @item = Item.new
   end
 
