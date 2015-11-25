@@ -15,7 +15,7 @@
         <%= image_tag "navbar/nav_items.png", size: "40x40" %>
   			<ul>
   				<li><a href="#">My Inventory</a></li>
-  				<li><a href="/items">Party Inventory</a></li>
+  				<li><%= link_to "Party Inventory", items_path %></li>
   			</ul>
   		</li>
       <li class="blue">
@@ -43,7 +43,7 @@
       <li class="red">
         <%= image_tag "navbar/nav_add.png", size: "40x40" %>
         <ul>
-          <li><a href="items/new">New Item</a></li>
+          <li><%= link_to "New Item", new_item_path %></li>
           <li><a href="#">New Character</a></li>
           <li><a href="#">New Note</a></li>
         </ul>

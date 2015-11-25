@@ -1,7 +1,11 @@
 <div class="container item_header">
   <div class="col-md-10">
     <h2><%= @item.name %></h2>
-    <p><%= @item.description %> description text here</p>
+    <% if @item.description === nil %>
+    <p>Description: <i><%= @item.description %></i></p>
+    <% else %>
+    <p><i>No description has been set for this item</i></p>
+    <% end %>
   </div>
   <div class="col-md-2 item_icon">
     <%= image_tag "icons/icon_" + @item.item_type + ".png", size: "60x60" %>

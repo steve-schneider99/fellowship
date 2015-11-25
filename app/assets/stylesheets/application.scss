@@ -5,8 +5,17 @@
 //   background-color: green
 // }
 
-td {
-  padding: 10px;
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.homepage {
+  background: url("background_home.jpg") no-repeat;
+}
+
+.item_list_name {
+  width: 40px;
 }
 
 .item_list_headings {
