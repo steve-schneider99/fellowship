@@ -1,12 +1,35 @@
-<h2>This is the items home page</h2>
+<h2 class="page_heading">Party Inventory</h2>
 
-<ul>
-  <li>List of items below</li>
-  <% @items.each do |item| %>
-    <li><%= link_to item.name, item_path(item) %></li>
-  <% end %>
-</ul>
+<div class="container">
+  <div class="col-md-2 item_search_params">
+    <h3>Search Params</h3>
+  </div>
+  <div class="col-md-10 item_party_inventory">
+    <h3>List of Items Below</h3>
+    <table>
+      <thead>
+        <tr class="item_list_headings">
+         <th>Item Name</th>
+         <th>Description</th>
+         <th>Modifiers</th>
+         <th>Owner/Equipped?</th>
+       </tr>
+     </thead>
+     <tbody>
+      <% @items.each do |item| %>
+        <tr>
+          <td aria-label="item_list_name"><%= link_to item.name, item_path(item) %></td>
+          <td aria-label="item_list_description"><%= item.description %></td>
+          <td aria-label="item_list_modifiers">Envision Corporate Development and Strategy</td>
+          <% if item.equipped? === true %>
+            <td aria-label="item_list_owner"><%= item.owner%>/YES</td>
+          <% else %>
+            <td aria-label="item_list_owner"><%= item.owner%>/NO</td>
+          <% end %>
+        </tr>
+      <% end %>
+ </tbody>
+</table>
 
-<h2>Add a new item below:</h2>
-
-<%= link_to "Click to add an item", new_item_path %>
+  </div>
+</div>

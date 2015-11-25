@@ -5,6 +5,29 @@
 //   background-color: green
 // }
 
+td {
+  padding: 10px;
+}
+
+.item_list_headings {
+  border-style: solid;
+}
+
+.item_search_params {
+  border-style: solid;
+  border-color: red;
+}
+
+.item_party_inventory {
+  border-style: solid;
+  border-color: red;
+}
+
+.page_heading {
+  text-align: center;
+  padding: 10px;
+}
+
 
 .item_detail_dropdowns {
   padding: 20px;
