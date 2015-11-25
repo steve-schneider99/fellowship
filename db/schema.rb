@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20151122073028) do
     t.string   "skill2"
     t.string   "skill3"
     t.string   "damage"
-    t.integer  "owner"
+    t.string   "owner",       default: "party"
     t.boolean  "equipped?",   default: false
     t.datetime "created_at"
     t.datetime "updated_at"
