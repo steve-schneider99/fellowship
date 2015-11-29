@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users
   resources :users
+  devise_for :users
+
   resources :items
+
+  resources :characters
+  
   resource :home do
     member do
       get 'social', to: "home#social"

@@ -12,7 +12,7 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container stat-display">
   <div class="col-md-4 item_details stats_detail">
     <h4>Attribute Bonuses</h4>
     <% if @item.stat1 === nil && @item.stat2 === nil && @item.stat3 === nil %>
@@ -82,4 +82,6 @@
     <p>+</p>
   </div>
 
+</div>
+<%= link_to "item edit link - dev only", edit_item_path(@item) %>
 </div>
