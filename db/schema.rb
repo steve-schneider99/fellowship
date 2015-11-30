@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20151129215505) do
     t.integer  "wisdom"
     t.integer  "charisma"
     t.integer  "hit_points"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -46,8 +47,9 @@ ActiveRecord::Schema.define(version: 20151129215505) do
     t.string   "skill2"
     t.string   "skill3"
     t.string   "damage"
-    t.string   "owner",       default: "party"
-    t.boolean  "equipped?",   default: false
+    t.string   "owner",        default: "party"
+    t.boolean  "equipped?",    default: false
+    t.integer  "character_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

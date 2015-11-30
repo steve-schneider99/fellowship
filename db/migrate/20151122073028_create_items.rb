@@ -16,6 +16,7 @@ class CreateItems < ActiveRecord::Migration
       t.column :damage, :string
       t.column :owner, :string, default: "party"
       t.column :equipped?, :boolean, default: false
+      t.column :character_id, :integer
       t.timestamps
     end
   end

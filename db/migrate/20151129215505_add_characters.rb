@@ -12,6 +12,7 @@ class AddCharacters < ActiveRecord::Migration
       t.column :wisdom, :integer
       t.column :charisma, :integer
       t.column :hit_points, :integer
+      t.column :user_id, :integer
       t.timestamps
     end
   end
