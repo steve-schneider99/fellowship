@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :items
 
   resources :characters
-  
+
   resource :home do
     member do
       get 'social', to: "home#social"
