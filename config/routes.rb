@@ -11,7 +11,7 @@ Rails.application.routes.draw do
       get 'social', to: "home#social"
     end
   end
+
   root to: "home#homepage"
-
-
+  
 end
